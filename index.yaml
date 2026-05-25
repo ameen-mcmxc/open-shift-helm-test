@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2026-05-25T23:24:09.038134711+02:00"
+entries:
+  ameen_helm_oc:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-05-25T23:28:38.774887514+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 7fe3678fa1851ad5a17b617bb61a0385e854d88633457aeac8c7d5d9629cc929
+    name: ameen_helm_oc
+    type: application
+    urls:
+    - https://github.com/ameen-mcmxc/open-shift-helm-test/tree/main/ameen_helm_oc/ameen_helm_oc-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-05-25T23:28:38.772990557+02:00"
