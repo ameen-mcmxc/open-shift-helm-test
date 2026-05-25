@@ -9,6 +9,6 @@ entries:
     name: ameen_helm_oc
     type: application
     urls:
-    - https://github.com/ameen-mcmxc/open-shift-helm-test/tree/main/ameen_helm_oc/ameen_helm_oc-0.1.0.tgz
+    - ameen_helm_oc-0.1.0.tgz
     version: 0.1.0
 generated: "2026-05-25T23:28:38.772990557+02:00"
