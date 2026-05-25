@@ -1,0 +1,24 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: my-app-builder
+  namespace: {{ .Values.namespace }}
+spec:
+  source:
+    type: Git
+    git:
+      uri: "https://github.com/sclorg/nodejs-ex.git"
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: "nodejs:18-ubi8"
+        namespace: openshift
+  output:
+    to:
+      kind: ImageStreamTag
+      name: "my-custom-app:latest"
+  triggers:
+    - type: ConfigChange
+    - type: ImageChange

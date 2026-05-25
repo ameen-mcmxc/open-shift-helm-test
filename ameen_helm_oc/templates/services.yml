@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    app: nginx-web
+  ports:
+    - protocol: TCP
+      port: {{ .Values.nginx.service.port }}
+      targetPort: {{ .Values.nginx.service.targetport }}
+  type: ClusterIP  # notice this here coz we use ingress now and thass why no need foe nodeport anymore, other wise we would be bypassing ingress feature

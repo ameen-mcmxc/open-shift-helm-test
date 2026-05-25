@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: nginx-route
+  namespace: {{ .Values.namespace }}
+spec:
+  to:
+    kind: Service
+    name: nginx-service # This must match the exact metadata.name of your Nginx Service
+#    weight: 100
+  port:
+    targetPort:  {{ .Values.nginx.service.targetport }}
